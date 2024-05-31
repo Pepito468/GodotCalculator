@@ -1,0 +1,194 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbpw0t4yrhwxv"]
+
+[ext_resource type="Script" path="res://Calculator.gd" id="1_j505x"]
+
+[node name="Calculator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j505x")
+metadata/_edit_lock_ = true
+
+[node name="NumPad" type="Node" parent="."]
+
+[node name="Numpad_1" type="Button" parent="NumPad"]
+offset_left = 400.0
+offset_top = 500.0
+offset_right = 474.0
+offset_bottom = 574.0
+text = "1"
+
+[node name="Numpad_2" type="Button" parent="NumPad"]
+offset_left = 475.0
+offset_top = 500.0
+offset_right = 549.0
+offset_bottom = 574.0
+text = "2"
+
+[node name="Numpad_3" type="Button" parent="NumPad"]
+offset_left = 550.0
+offset_top = 500.0
+offset_right = 624.0
+offset_bottom = 574.0
+text = "3"
+
+[node name="Numpad_4" type="Button" parent="NumPad"]
+offset_left = 400.0
+offset_top = 425.0
+offset_right = 474.0
+offset_bottom = 499.0
+text = "4"
+
+[node name="Numpad_5" type="Button" parent="NumPad"]
+offset_left = 475.0
+offset_top = 425.0
+offset_right = 549.0
+offset_bottom = 499.0
+text = "5"
+
+[node name="Numpad_6" type="Button" parent="NumPad"]
+offset_left = 550.0
+offset_top = 425.0
+offset_right = 624.0
+offset_bottom = 499.0
+text = "6"
+
+[node name="Numpad_7" type="Button" parent="NumPad"]
+offset_left = 400.0
+offset_top = 350.0
+offset_right = 474.0
+offset_bottom = 424.0
+text = "7"
+
+[node name="Numpad_8" type="Button" parent="NumPad"]
+offset_left = 475.0
+offset_top = 350.0
+offset_right = 549.0
+offset_bottom = 424.0
+text = "8"
+
+[node name="Numpad_9" type="Button" parent="NumPad"]
+offset_left = 550.0
+offset_top = 350.0
+offset_right = 624.0
+offset_bottom = 424.0
+text = "9"
+
+[node name="Numpad_0" type="Button" parent="NumPad"]
+offset_left = 400.0
+offset_top = 275.0
+offset_right = 474.0
+offset_bottom = 349.0
+text = "0"
+
+[node name="OperationsPad" type="Node" parent="."]
+
+[node name="Numpad_plus" type="Button" parent="OperationsPad"]
+offset_left = 625.0
+offset_top = 500.0
+offset_right = 699.0
+offset_bottom = 574.0
+text = "+"
+
+[node name="Numpad_minus" type="Button" parent="OperationsPad"]
+offset_left = 625.0
+offset_top = 425.0
+offset_right = 699.0
+offset_bottom = 499.0
+text = "-"
+
+[node name="Numpad_multiply" type="Button" parent="OperationsPad"]
+offset_left = 700.0
+offset_top = 425.0
+offset_right = 774.0
+offset_bottom = 499.0
+text = "*"
+
+[node name="Numpad_divide" type="Button" parent="OperationsPad"]
+offset_left = 700.0
+offset_top = 500.0
+offset_right = 774.0
+offset_bottom = 574.0
+text = "/"
+
+[node name="Numpad_pow" type="Button" parent="OperationsPad"]
+offset_left = 625.0
+offset_top = 350.0
+offset_right = 699.0
+offset_bottom = 424.0
+text = "x^y"
+
+[node name="Numpad_sqrt" type="Button" parent="OperationsPad"]
+offset_left = 700.0
+offset_top = 350.0
+offset_right = 774.0
+offset_bottom = 424.0
+text = "sqrt"
+
+[node name="Output_Text" type="TextEdit" parent="."]
+layout_direction = 3
+layout_mode = 0
+offset_left = 306.0
+offset_top = 54.0
+offset_right = 785.0
+offset_bottom = 155.0
+placeholder_text = "0"
+editable = false
+scroll_fit_content_height = true
+
+[node name="Clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 500.0
+offset_right = 849.0
+offset_bottom = 574.0
+text = "Clear"
+
+[node name="Equals" type="Button" parent="."]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 425.0
+offset_right = 849.0
+offset_bottom = 499.0
+text = "="
+
+[node name="BackGround" type="ColorRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 342.0
+offset_top = 33.0
+offset_right = 862.0
+offset_bottom = 610.0
+mouse_filter = 2
+color = Color(0, 0, 0.243137, 1)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 668.0
+offset_top = 570.0
+offset_right = 860.0
+offset_bottom = 606.0
+text = "Calculator by Pepito468"
+editable = false
+
+[connection signal="pressed" from="NumPad/Numpad_1" to="." method="_on_numpad_1_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_2" to="." method="_on_numpad_2_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_3" to="." method="_on_numpad_3_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_4" to="." method="_on_numpad_4_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_5" to="." method="_on_numpad_5_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_6" to="." method="_on_numpad_6_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_7" to="." method="_on_numpad_7_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_8" to="." method="_on_numpad_8_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_9" to="." method="_on_numpad_9_pressed"]
+[connection signal="pressed" from="NumPad/Numpad_0" to="." method="_on_numpad_0_pressed"]
+[connection signal="pressed" from="OperationsPad/Numpad_plus" to="." method="_on_numpad_plus_pressed"]
+[connection signal="pressed" from="OperationsPad/Numpad_minus" to="." method="_on_numpad_minus_pressed"]
+[connection signal="pressed" from="OperationsPad/Numpad_multiply" to="." method="_on_numpad_multiply_pressed"]
+[connection signal="pressed" from="OperationsPad/Numpad_divide" to="." method="_on_numpad_divide_pressed"]
+[connection signal="pressed" from="OperationsPad/Numpad_pow" to="." method="_on_numpad_pow_pressed"]
+[connection signal="pressed" from="OperationsPad/Numpad_sqrt" to="." method="_on_numpad_sqrt_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="Equals" to="." method="_on_equals_pressed"]
