@@ -34,7 +34,7 @@ func _on_equals_pressed():
 			num = sqrt(buffer)
 	output_number()
 	buffer = num
-	clear_stream()
+
 
 func _on_clear_pressed():
 	num = 0.0
